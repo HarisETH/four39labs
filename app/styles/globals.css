@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.font-dmsans{
+    font-family: 'DM Sans', sans-serif;
+}
+.font-logo{
+    font-family: 'Climate Crisis', cursive;
+}
+.font-fira{
+    font-family: 'Fira Code', sans-serif;
+}
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9134EE #EBEBEB;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 2px;
+    width: 2px;
+    height: 6px;
+    padding: 1px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 1px;
+    background-color: #EBEBEB;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #EBEBEB;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #EBEBEB;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: #9134EE;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #9134EE;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #9134EE;
+  }
+  .card {
+    backdrop-filter: blur(25px) saturate(195%);
+    -webkit-backdrop-filter: blur(25px) saturate(195%);
+    background-color: rgba(144, 19, 254, 0.44);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
