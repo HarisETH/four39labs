@@ -1,5 +1,5 @@
 {
     "redirects": [
-        { "source": "/", "destination": "[https://metarover.vercel.app/metarover](https://metarover.vercel.app/metarover)" }
+        { "source": "/", "destination": "metarover" }
     ]
 }
