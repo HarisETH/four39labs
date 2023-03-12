@@ -36,9 +36,9 @@ const metarover = () => {
 
   return (
     <section
-      className={`font-dmsans min-h-screen h-full flex-col flex gap-16 w-full px-12 py-12 ${sdark}`}
+      className={`font-dmsans min-h-screen h-full flex-col flex gap-16 w-full px-4 md:px-12 py-12 ${sdark}`}
     >
-      <nav className="flex justify-between items-center ">
+      <nav className="flex justify-between items-center justify-self-start">
         <h1 className="text-4xl font-bold tracking-tighter flex justify-end md:justify-start md:items-end flex-col md:flex-row md:gap-2 ">
           MetaRover{" "}
           <span className="text-lg text-purple-400">from Four39Labs</span>{" "}
@@ -55,14 +55,14 @@ const metarover = () => {
         </button>
       </nav>
 
-      <div className="div flex lg:flex-row flex-col w-full">
+      <div className="div flex lg:flex-row flex-col w-full items-center flex-grow justify-center h-full">
         <div className="w-full lg:w-1/2 lg:px-6">
           <div className="parent flex flex-col flex-1 w-full gap-6">
             
              
-            <div class="preview flex flex-col w-3/4 self-center rounded-md">
+            <div class="preview flex flex-col w-full self-center rounded-md">
               <label className="px-2 text-bold text-gray-500">Google Preview </label>
-              <div className="div flex flex-col bg-gray-100 px-4 py-3">
+              <div className="div flex flex-col rounded-md shadow bg-gray-100 px-4 py-3">
               <span id="titlePreview" className="text-[#035AC6]">
                 {title}
               </span>
@@ -161,7 +161,8 @@ const metarover = () => {
           </div>
         </div>
 
-        <div className="w-full relative lg:w-1/2 lg:px-6 z-[100]  bg-gray-300 font-fira rounded-md">
+        <div className="copier-body border border-gray-100 p-4 md:p-12 rounded-md w-full relative lg:w-1/2 ">
+        <div className=" z-[100] copier text-white bg-gray-300 font-fira rounded-md">
         
         
         
@@ -177,7 +178,7 @@ const metarover = () => {
               console.log(tags);
               console.log(copyTags);
             }}
-            className="h-8 w-8 flex items-center absolute right-2 top-2 border-gray-200 border bg-gray-50 justify-center rounded-md hover:bg-purple-200"
+            className="h-8 w-8 flex items-center opacity-50 hover:opacity-100 copier absolute right-2 top-2 border-gray-200 border bg-gray-50 justify-center rounded-md hover:bg-purple-200"
           >
             <CopyIcon />
           </button>
@@ -195,7 +196,7 @@ const metarover = () => {
       </Toast.Root>
       <Toast.Viewport className="[--viewport-padding:_25px] fixed top-0 right-0 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none" />
     </Toast.Provider>
-          <pre className="font-fira p-4 overflow-auto z-50" ref={copyTags}>
+          <pre className="font-fira p-4 text-xs md:text-base overflow-auto z-50" ref={copyTags}>
             {`<!-- title -->
 <title>${title}</title>
 <meta property='og:title'  content='${title}'>
@@ -213,6 +214,7 @@ const metarover = () => {
 
 `}
           </pre>
+        </div>
         </div>
       </div>
 
