@@ -1,5 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-
+export const meta = () => ({
+  charset: "utf-8",
+  title: "MetaRover",
+  viewport: "width=device-width,initial-scale=1",
+  description: "MetaRover is a fast, agile meta-tags generator within seconds. Generate Meta Tags on the flow !",
+});
 //uI IMPORTS
 
 import * as Checkbox from "@radix-ui/react-checkbox";
@@ -7,11 +12,12 @@ import { CopyIcon, GitHubLogoIcon, SunIcon } from "@radix-ui/react-icons";
 import * as Label from "@radix-ui/react-label";
 import * as Progress from "@radix-ui/react-progress";
 import * as Toast from '@radix-ui/react-toast';
+import { Meta } from "@remix-run/react";
 //CODE
 
 //MIS
 
-const metarover = () => {
+export default function metarover () {
   
   const [textAreaLength, settextAreaLength] = useState(0);
   const [isDark, setIsDark] = useState(false);
@@ -35,8 +41,14 @@ const metarover = () => {
   };
 
   return (
+    <html>
+    
+    <head>
+     <Meta ></Meta>
+    </head>
+    <body>
     <section
-      className={`font-dmsans min-h-screen h-full flex-col flex gap-16 w-full px-4 md:px-12 py-12 ${sdark}`}
+      className={`font-dmsans min-h-screen h-full flex-col flex gap-16 w-full px-4 overflow-x-hidden md:px-12 py-12 ${sdark}`}
     >
       <nav className="flex justify-between items-center justify-self-start">
         <h1 className="text-4xl font-bold tracking-tighter flex justify-end md:justify-start md:items-end flex-col md:flex-row md:gap-2 ">
@@ -178,7 +190,7 @@ const metarover = () => {
               console.log(tags);
               console.log(copyTags);
             }}
-            className="h-8 w-8 flex items-center opacity-50 hover:opacity-100 copier absolute right-2 top-2 border-gray-200 border bg-gray-50 justify-center rounded-md hover:bg-purple-200"
+            className="h-8 w-8 flex  items-center opacity-50 hover:opacity-100 copier absolute right-2 top-2 border-gray-200 border bg-gray-50 justify-center rounded-md hover:bg-gray-700"
           >
             <CopyIcon />
           </button>
@@ -194,7 +206,7 @@ const metarover = () => {
         </Toast.Title>
         
       </Toast.Root>
-      <Toast.Viewport className="[--viewport-padding:_25px] fixed top-0 right-0 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none" />
+      <Toast.Viewport className="[--viewport-padding:_25px] fixed bottom-0 right-0 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none" />
     </Toast.Provider>
           <pre className="font-fira p-4 text-xs md:text-base overflow-auto z-50" ref={copyTags}>
             {`<!-- title -->
@@ -226,10 +238,12 @@ const metarover = () => {
         <GitHubLogoIcon /> Star on Github
       </button>
     </section>
+    </body>
+    </html>
   );
 };
 
-export default metarover;
+// export default metarover;
 
 // meta property="og:type" content="website">
 {

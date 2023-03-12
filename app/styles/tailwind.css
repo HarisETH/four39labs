@@ -658,6 +658,14 @@ video {
   max-width: 100vw;
 }
 
+.max-w-\[10vw\] {
+  max-width: 10vw;
+}
+
+.max-w-\[90vw\] {
+  max-width: 90vw;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -755,6 +763,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded {
@@ -1106,8 +1118,29 @@ video {
   background-color: rgb(107 33 168 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-bl:hover {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
+}
+
+.hover\:stroke-black:hover {
+  stroke: #000;
+}
+
+.hover\:stroke-blackA1:hover {
+  stroke: hsla(0, 0%, 0%, 0.012);
+}
+
+.hover\:stroke-blackA2:hover {
+  stroke: hsla(0, 0%, 0%, 0.027);
+}
+
+.hover\:stroke-slate-400:hover {
+  stroke: #94a3b8;
 }
 
 .hover\:opacity-100:hover {
